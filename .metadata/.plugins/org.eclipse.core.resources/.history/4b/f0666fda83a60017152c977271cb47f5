@@ -1,0 +1,10 @@
+import java.awt.List;
+import java.util.ArrayList;
+
+public class Village {
+Punkt cord;
+int type; //0 - cel, 1 - off, 2 - fejk off, 3 - fejk def
+ArrayList<Village> linked = new ArrayList<Village>();
+
+Wioska(Punkt cord, )
+}

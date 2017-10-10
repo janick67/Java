@@ -1,0 +1,31 @@
+import java.awt.List;
+import java.util.ArrayList;
+
+public class Wioska {
+Punkt wsp;
+int typ; //0 - cel, 1 - off, 2 - fejk off, 3 - fejk def
+ArrayList<Wioska> linked = new ArrayList<Wioska>();
+
+Wioska(Punkt wsp, int typ) {
+	this.wsp = wsp;
+	this.typ = typ;
+}
+
+Wioska(Punkt wsp) {
+	this.wsp = wsp;
+}
+
+Wioska(int x, int y) {
+	wsp = new Punkt(x, y);
+}
+
+Wioska(int x, int y, int typ) {
+	wsp = new Punkt(x, y);
+	this.typ = typ;
+}
+
+Punkt get_wsp() {
+	return wsp;
+}
+
+}

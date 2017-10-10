@@ -1,0 +1,5 @@
+
+public class Czas {
+int miesiac, dzien, godz, min, sek, msek;
+
+}

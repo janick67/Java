@@ -1,0 +1,48 @@
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+public class Atak {
+Wioska cel, pochodzenie;
+Calendar dotarcie, start;
+int typ; 
+
+void dod() {
+	
+Calendar calendar = new GregorianCalendar(2015, 8, 4, 10, 44, 0);
+//calendar.set(Calendar.MILLISECOND, 980);
+//Calendar czas_ataku = new GregorianCalendar(0, 0, 0, 23, 3, 10);
+//czas_ataku.set(Calendar.MILLISECOND, 30);
+int hour = 24;
+int min = 1;
+int sec = 1;
+int msec = 10;
+long nowy = calendar.getTimeInMillis() + ((hour*60+min)*60+sec)*1000+msec;
+Calendar cnowy = Calendar.getInstance();
+cnowy.setTimeInMillis(nowy);
+SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+System.out.println(dateFormat.format(calendar.getTime()));
+}
+
+Calendar get_time(boolean dotarcie_albo_start) {
+	if (!dotarcie_albo_start) {
+		return dotarcie;
+	}
+	else {
+		return start;	
+	}}
+
+
+String get_time(boolean dotarcie_albo_start, boolean string) {
+	if (!dotarcie_albo_start) {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss::SSS MM-dd");
+		return dateFormat.format(dotarcie.getTime());
+	}else {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss::SSS MM-dd");
+		return dateFormat.format(start.getTime());
+	}}
+
+}
+
+
+
